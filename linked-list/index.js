@@ -1,14 +1,14 @@
-const Cell = require('./cell');
+const Cell = require('../cell/unidirecional-cell');
 
 const BEGIN = 'begin';
 const END = 'end';
 
-class List {
+module.exports = class List {
   constructor() {
     this.top = new Cell(BEGIN);
     this.top.next = new Cell(END);
-    // console.log(JSON.stringify(this, null, 2));
   }
+
   add(value, targetValue = BEGIN) {
     let current;
     const newCell = new Cell(value);
@@ -18,6 +18,7 @@ class List {
     newCell.next = current.next;
     current.next = newCell;
   }
+
   addSorted(value) {
     let current;
     const newCell = new Cell(value);
@@ -27,6 +28,7 @@ class List {
     newCell.next = current.next;
     current.next = newCell;
   }
+
   remove(targetValue) {
     let current;
 
@@ -34,6 +36,7 @@ class List {
 
     current.next = current.next.next;
   }
+
   show() {
     const values = [];
 
@@ -41,43 +44,5 @@ class List {
       values.push(current.value);
     }
     console.log(values.join(' -> '));
-    // console.log(JSON.stringify(this, null, 2));
   }
-}
-
-const list = new List();
-
-// add 3 values
-list.add(1);
-list.add(2, 1);
-list.add(3, 2);
-list.show();
-
-// remove from begin
-list.remove(1);
-list.show();
-// undo
-list.add(1);
-list.show();
-
-// remove from middle
-list.remove(2);
-list.show();
-// undo
-list.add(2, 1);
-list.show();
-
-// remove from end
-list.remove(3);
-list.show();
-// undo
-list.add(3, 2);
-list.show();
-
-const sortedList = new List();
-sortedList.addSorted(2);
-sortedList.addSorted(1);
-sortedList.addSorted(4);
-sortedList.addSorted(3);
-sortedList.addSorted(5);
-sortedList.show();
+};
