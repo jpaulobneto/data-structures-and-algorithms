@@ -19,10 +19,14 @@ module.exports = class Stack {
     return value;
   }
 
-  clear() {
+  getValues() {
+    const values = [];
+
     while (!this.isEmpty()) {
-      console.log(this.pop());
+      values.push(this.pop());
     }
+
+    return values;
   }
 
   push(value) {
