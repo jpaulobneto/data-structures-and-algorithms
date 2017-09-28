@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LinkedList add(value, afterOf) add a value to an empty list 1`] = `
+Array [
+  1,
+]
+`;
+
+exports[`LinkedList add(value, afterOf) add an value after another value #1 1`] = `
+Array [
+  1,
+  2,
+  3,
+]
+`;
+
+exports[`LinkedList add(value, afterOf) add an value after another value #2 1`] = `
+Array [
+  1,
+  2,
+  3,
+]
+`;
