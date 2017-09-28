@@ -1,12 +1,16 @@
 {
-  "name": "data-structures-and-algorithms",
+  "name": "data-structures-and-algorithms-with-javascript",
   "version": "0.1.0",
   "description": "Data structures and algorithms with JavaScript",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["algorithms", "data structures"],
+  "keywords": [
+    "algorithms",
+    "data structures",
+    "javascript"
+  ],
   "author": "João Paulo Barbosa <jpaulobneto@gmail.com>",
   "license": "MIT",
   "devDependencies": {
