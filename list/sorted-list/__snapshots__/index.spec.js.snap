@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SortedList add(value) add a value to an empty list 1`] = `
+Array [
+  1,
+]
+`;
+
+exports[`SortedList add(value) add an values sorted 1`] = `
+Array [
+  1,
+  2,
+  3,
+]
+`;
