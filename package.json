@@ -4,7 +4,7 @@
   "description": "Data structures and algorithms with JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [
     "algorithms",
@@ -16,6 +16,7 @@
   "devDependencies": {
     "eslint": "^4.7.2",
     "eslint-config-airbnb-base": "^12.0.0",
-    "eslint-plugin-import": "^2.7.0"
+    "eslint-plugin-import": "^2.7.0",
+    "jest": "^21.2.1"
   }
 }
