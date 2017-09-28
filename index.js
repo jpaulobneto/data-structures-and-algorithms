@@ -1,45 +1,45 @@
-const List = require('./linked-list');
+const { LinkedList, SortedList } = require('./list');
 const Stack = require('./stack');
 
 console.log('\n===> List');
 
-const list = new List();
+const linkedList = new LinkedList();
 // add 3 values
-list.add(1);
-list.add(2, 1);
-list.add(3, 2);
-list.show();
+linkedList.add(1);
+linkedList.add(2, 1);
+linkedList.add(3, 2);
+console.log(linkedList.getValues().join(' -> '));
 
 // remove from begin
-list.remove(1);
-list.show();
+linkedList.remove(1);
+console.log(linkedList.getValues().join(' -> '));
 // undo
-list.add(1);
-list.show();
+linkedList.add(1);
+console.log(linkedList.getValues().join(' -> '));
 
 // remove from middle
-list.remove(2);
-list.show();
+linkedList.remove(2);
+console.log(linkedList.getValues().join(' -> '));
 // undo
-list.add(2, 1);
-list.show();
+linkedList.add(2, 1);
+console.log(linkedList.getValues().join(' -> '));
 
 // remove from end
-list.remove(3);
-list.show();
+linkedList.remove(3);
+console.log(linkedList.getValues().join(' -> '));
 // undo
-list.add(3, 2);
-list.show();
+linkedList.add(3, 2);
+console.log(linkedList.getValues().join(' -> '));
 
 console.log('\n===> Sorted List');
 
-const sortedList = new List();
-sortedList.addSorted(2);
-sortedList.addSorted(1);
-sortedList.addSorted(4);
-sortedList.addSorted(3);
-sortedList.addSorted(5);
-sortedList.show();
+const sortedList = new SortedList();
+sortedList.add(2);
+sortedList.add(1);
+sortedList.add(4);
+sortedList.add(3);
+sortedList.add(5);
+console.log(sortedList.getValues().join(' -> '));
 
 console.log('\n===> Stack');
 
@@ -47,5 +47,5 @@ const stack = new Stack();
 stack.push(1);
 stack.push(2);
 stack.push(3);
-stack.clear();
+console.log(stack.getValues().join(' -> '));
 
