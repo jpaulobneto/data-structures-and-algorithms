@@ -1,10 +1,9 @@
 const Cell = require('../cell/unidirecional-cell');
 
-const TOP = 'top';
-
 module.exports = class Stack {
   constructor() {
-    this.top = new Cell(TOP);
+    this.top = new Cell();
+    this.size = 0;
   }
 
   isEmpty() {
@@ -15,6 +14,7 @@ module.exports = class Stack {
     const { value } = this.top.next;
 
     this.top.next = this.top.next.next;
+    this.size -= 1;
 
     return value;
   }
@@ -34,5 +34,6 @@ module.exports = class Stack {
 
     newCell.next = this.top.next;
     this.top.next = newCell;
+    this.size += 1;
   }
 };

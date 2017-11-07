@@ -21,7 +21,7 @@ describe('Queue', () => {
 
       queue.enqueue(1);
 
-      expect(queue.isEmpty()).toBeFalsy();
+      expect(queue.isEmpty()).toEqual(false);
     });
   });
 
