@@ -3,7 +3,10 @@ Data structures and algorithms with JavaScript.
 
 ## WIP
 
-- [x] Linked Lists
+- [x] List
+  - [x] Linked List
+  - [x] Sorted Linked List
 - [x] Queue
-- [x] Sorted Linked Lists
+  - [x] Dynamic Queue
+  - [x] Fixed Queue
 - [x] Stack
