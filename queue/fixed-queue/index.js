@@ -9,6 +9,10 @@ module.exports = class Queue {
     this.size = 0;
   }
 
+  getNextPosition(currentPosition) {
+    return (currentPosition + 1) % this.storage.length;
+  }
+
   isEmpty() {
     return this.size === 0;
   }
@@ -35,8 +39,10 @@ module.exports = class Queue {
   dequeue() {
     const value = this.storage[this.head];
 
+    // This line is opcional.
     this.storage[this.head] = undefined;
-    this.head = (this.head + 1) % this.storage.length;
+
+    this.head = this.getNextPosition(this.head);
     this.size -= 1;
 
     return value;
@@ -48,7 +54,7 @@ module.exports = class Queue {
     }
 
     this.storage[this.tail] = value;
-    this.tail = (this.tail + 1) % this.storage.length;
+    this.tail = this.getNextPosition(this.tail);
     this.size += 1;
   }
 
