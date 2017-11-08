@@ -1,6 +1,6 @@
-const { LinkedList, SortedList } = require('./list');
-const Queue = require('./queue');
-const Stack = require('./stack');
+const { LinkedList, SortedList } = require('./src/list');
+const Queue = require('./src/queue');
+const Stack = require('./src/stack');
 
 module.exports = {
   LinkedList,
