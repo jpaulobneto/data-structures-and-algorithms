@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RPNCalculator loadExpression(expression) 1`] = `
+Stack {
+  "size": 3,
+  "top": Cell {
+    "next": Cell {
+      "next": Cell {
+        "next": Cell {
+          "next": null,
+          "value": 1,
+        },
+        "value": 2,
+      },
+      "value": 3,
+    },
+    "value": null,
+  },
+}
+`;
+
+exports[`RPNCalculator loadExpression(expression) 2`] = `
+Stack {
+  "size": 2,
+  "top": Cell {
+    "next": Cell {
+      "next": Cell {
+        "next": null,
+        "value": "+",
+      },
+      "value": "+",
+    },
+    "value": null,
+  },
+}
+`;
