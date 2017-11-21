@@ -40,7 +40,13 @@ module.exports = class HashTable {
     return null;
   }
 
-  set(key, value) {
+  contains(key) {
+    const item = this.getItem(key);
+
+    return item != null;
+  }
+
+  set(key, value = null) {
     let index;
     let item;
 

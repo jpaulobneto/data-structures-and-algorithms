@@ -5,7 +5,7 @@ describe('HashTable', () => {
     expect(() => new HashTable()).not.toThrow();
   });
 
-  it('set()', () => {
+  it('set(key, value)', () => {
     const hashTable = new HashTable();
 
     hashTable.set('paulo@example.com', 'Paulo');
@@ -25,6 +25,17 @@ describe('HashTable', () => {
     expect(hashTable.get('paulo@example.com')).toEqual('Paulo');
     expect(hashTable.get('joao@example.com')).toEqual('João');
     expect(hashTable.get('neto@example.com')).toEqual('Neto');
+  });
+
+  it('contains(key)', () => {
+    const hashTable = new HashTable();
+
+    hashTable.set('joao');
+    hashTable.set('paulo', 'Paulo');
+
+    expect(hashTable.contains('joao')).toEqual(true);
+    expect(hashTable.contains('paulo')).toEqual(true);
+    expect(hashTable.contains('neto')).toEqual(false);
   });
 
   it('resize()', () => {
